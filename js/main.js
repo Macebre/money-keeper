@@ -29,6 +29,10 @@ let start = document.getElementById('start'),
     accumulationPercent = document.getElementById('percent');
     let money, time;
 
+window.onload = function() {
+    alert('Пожалуйста нажмите кнопку ' + start.textContent);
+};
+
 start.addEventListener('click', function(event) {
     time = new Date(prompt('Введите текущую дату YYYY-MM-DD', ''));
     money = +prompt('Введите бюджет в месяц', '');
@@ -40,10 +44,17 @@ start.addEventListener('click', function(event) {
     appData.budget = money;
     appData.timeData = time;
     income.textContent += money.toFixed();
+
     // -----------------------------------
     currentYear.value = new Date(Date.parse(time)).getFullYear();
     currentMonth.value = new Date(Date.parse(time)).getMonth() + 1;
     currentDay.value = new Date(Date.parse(time)).getDate();
+
+    // make the button active
+    approve.removeAttribute('disabled');
+    approveNoImpExpenses.removeAttribute('disabled');
+    calculateDayBudget.removeAttribute('disabled');
+    checkboxAccumulation.removeAttribute('disabled');
 });
 
 approve.addEventListener('click', function(event) {
@@ -136,6 +147,7 @@ accumulationPercent.addEventListener('input', function() {
 
     }
 });
+
 
 
 let appData = {
