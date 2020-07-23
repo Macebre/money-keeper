@@ -13,42 +13,45 @@
 </head>
 <body>
 <div class="app">
-    <div class="logo">
-        <span>money</span>
-        keeper
+    <div class="app__bg"></div>
+    <div class="container">
+        <div class="logo">
+            <span>money</span>
+            keeper
+        </div>
+        <div class="title">
+            Daily budget calculation
+        </div>
+        <button class="start" id="start">Start calculation</button>
     </div>
-    <div class="title">
-        Daily budget calculation
-    </div>
-    <button class="start" id="start">Start calculation</button>
-    <div class="main">
+    <section class="main">
         <div class="data">
             <div class="choose-expenses">Enter required expenses</div>
             <input class="expenses-item" type="text" id="expenses_1" placeholder="Name">
-			<input class="expenses-item" type="text" id="expenses_2" placeholder="Price">
-			<input class="expenses-item" type="text" id="expenses_3" placeholder="Name">
-			<input class="expenses-item" type="text" id="expenses_4" placeholder="Price">
+            <input class="expenses-item" type="text" id="expenses_2" placeholder="Price">
+            <input class="expenses-item" type="text" id="expenses_3" placeholder="Name">
+            <input class="expenses-item" type="text" id="expenses_4" placeholder="Price">
             <button class="expenses-item-btn" id="expenses-item-btn" disabled>Approve</button>
 
             <div class="optionalexpenses">Enter optional expenses</div>
-			<input class="optionalexpenses-item" type="text" id="optionalexpenses_1">
-			<input class="optionalexpenses-item" type="text" id="optionalexpenses_2">
-			<input class="optionalexpenses-item" type="text" id="optionalexpenses_3">
+            <input class="optionalexpenses-item" type="text" id="optionalexpenses_1" placeholder="0">
+            <input class="optionalexpenses-item" type="text" id="optionalexpenses_2" placeholder="0">
+            <input class="optionalexpenses-item" type="text" id="optionalexpenses_3" placeholder="0">
             <button class="optionalexpenses-btn" id="optionalexpenses-btn" disabled>Approve</button>
 
             <div class="count-budget">Daily budget calculation</div>
             <button class="count-budget-btn" disabled>Calculate</button>
 
             <div class="choose-income-label">Enter the articles of possible income separated by commas</div>
-            <input class="choose-income" type="text" id="income" maxlength="55">
+            <input class="choose-income" type="text" id="income" maxlength="55" placeholder="Сoffee shop, terminals">
 
             <div class="checksavings">Are there any savings:
                 <input id="savings" type="checkbox" disabled/>
             </div>
             <label for="sum">Total</label>
-			<input class="choose-sum" id="sum" type="text">
-			<label for="percent">Percent</label>
-            <input class="choose-percent" id="percent" type="text">
+            <input class="choose-sum" id="sum" type="text" placeholder="10000">
+            <label for="percent">Percent</label>
+            <input class="choose-percent" id="percent" type="text" placeholder="10">
         </div>
         <div class="result">
             <div class="time-data">
@@ -91,8 +94,9 @@
                 <div class="yearsavings-value"></div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
-    <script src="js/main.js"></script>
+<!-- scripts------------------ -->
+<script src="js/main.js"></script>
 </body>
 </html>

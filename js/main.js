@@ -30,7 +30,7 @@ let start = document.getElementById('start'),
     let money, time;
 
 window.onload = function() {
-    alert('Пожалуйста нажмите кнопку ' + start.textContent);
+    alert('Please click on ' + '"' + start.textContent + '"');
 };
 
 start.addEventListener('click', function(event) {
